@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav a{
+    text-decoration: none !important;
+    color: rgb(253, 253, 253) !important;
+    font-size: 25px;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(0, 149, 255);
+    height: 70px;
+}
+.edit{
+    background-color: greenyellow;
+    padding: 0 20%;
+}
+.del{
+    background-color: red;
+    padding: 10px 20%; 
+    width: fit-content !important;
+}
+.button{
+    
+    justify-content: space-around
+}
+#add-category-modal{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 350px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 30px 20px;
+    border-radius: 10px;
+    z-index: 1;
+    transform: translate(-50%,-50%) scale(0);
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s linear;
+}
+#edit-category-modal{
+    position: fixed;
+    z-index: 100 !important;
+    left: 50%;
+    top: 50%;
+    width: 350px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 30px 20px;
+    border-radius: 10px;
+    z-index: 1;
+    transform: translate(-50%,-50%) scale(0);
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s linear;
+}
+.modal-body{
+    width: 100%;
+    height: 100vh;
+}
+.modal-body::after{
+    content: '';
+    display: block;
+    position: fixed;
+    z-index: 90 !important;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.766);
+}
